@@ -383,6 +383,7 @@
 
 .menu-l {
 	display:inline-block;
+	z-index:50;
 	width:230px;
 	vertical-align:top;
 	margin:-10px 17px 0 0;
@@ -404,6 +405,28 @@
 	-webkit-transition:all 0.2s ease-in-out;
 	-moz-transition:all 0.2s ease-in-out;
 	-o-transition:all 0.2s ease-in-out;
+}
+@media all and (max-height: 722px) {
+	.menu-l ul li a {
+		padding:7px 10px 8px 13px;
+	}
+}
+@media all and (max-height: 684px) {
+	.menu-l ul li a {
+		font-size:17px;
+		line-height:18px;
+	}
+}
+@media all and (max-height: 665px) {
+	.menu-l ul li a {
+		padding:6px 10px 7px 13px;
+	}
+}
+@media all and (max-height: 627px) {
+	.menu-l ul li a {
+		font-size:16px;
+		line-height:17px;
+	}
 }
 .menu-l ul li a:before {
 	content:'';
@@ -433,11 +456,11 @@
 .menu-l > ul > li:first-child > a {
 	border-top-width:0;
 }
-.menu-l ul li.sub > a {
+.menu-l ul li.sub > a, .menu-l ul li.primary > a {
 	color:#ffffff;
 	background:#c82a81;
 }
-.menu-l ul li.sub > a:before {
+.menu-l ul li.sub > a:before, .menu-l ul li.primary > a:before {
 	background:#c82a81;
 }
 .menu-l ul li.sub ul {
@@ -549,6 +572,7 @@
 }
 .filter-r {
 	display:inline-block;
+	z-index:50;
 	width:149px;
 	vertical-align:top;
 	margin:-14px -40px 0 0;
@@ -728,7 +752,7 @@
 	display:inline-block;
 	width:709px;
 	vertical-align:top;
-	margin:-10px -10px 0 0;
+	margin:-5px -10px 0 0;
 }
 .product-i .core {
 	position:relative;

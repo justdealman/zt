@@ -1,4 +1,82 @@
-﻿$(document).ready(function() {
+﻿function navFix() {
+	var navTop = $('.menu-l').offset().top;
+	if ( $(window).height() > 600 ) {
+		$(window).bind('scroll', function() {
+			if ( $(document).scrollTop() > navTop ) {
+				$('.menu-l').css({
+					'position': 'fixed',
+					'left': '50%',
+					'margin': '0 0 0 -480px'
+				});
+				$('.catalog-c, .product-i, .text-i, .list-i').css({
+					'margin-left': '249px'
+				});
+				var x = $(document).scrollTop()-($('.content-b').offset().top+$('.content-b').outerHeight()-$('.menu-l').outerHeight()+20);
+				if ( x > 0 ) {
+					$('.menu-l').css({
+						'top': -x+'px'
+					});
+				}
+				else {
+					$('.menu-l').css({
+						'top': '0'
+					});
+				}
+			}
+			else {
+				$('.menu-l').css({
+					'position': 'relative',
+					'left': '0',
+					'top': '0',
+					'margin': '-10px 17px 0 0'
+				});
+				$('.catalog-c, .product-i, .text-i, .list-i').css({
+					'margin-left': '0'
+				});
+			}
+		});
+	}
+}
+function filterFix() {
+	var filterTop = $('.filter-r').offset().top-10;
+	if ( $(window).height() > 600 ) {
+		$(window).bind('scroll', function() {
+			if ( $(document).scrollTop() > filterTop ) {
+				$('.filter-r').css({
+					'position': 'fixed',
+					'right': '50%',
+					'margin': '10px -500px 0 0'
+				});
+				var x = $(document).scrollTop()-($('.content-b').offset().top+$('.content-b').outerHeight()-$('.filter-r').outerHeight()-10);
+				if ( x > 0 ) {
+					$('.filter-r').css({
+						'top': -x+'px'
+					});
+				}
+				else {
+					$('.filter-r').css({
+						'top': '0'
+					});
+				}
+			}
+			else {
+				$('.filter-r').css({
+					'position': 'relative',
+					'right': '0',
+					'top': '0',
+					'margin': '-14px -40px 0 0'
+				});
+			}
+		});
+	}
+}
+$(document).ready(function() {
+	if ( $('.menu-l').length > 0 ) {
+		navFix();
+	}
+	if ( $('.filter-r').length > 0 ) {
+		filterFix();
+	}
 	if ( $('.about-i').length > 0 ) {
 		$('.about-i .nav li a').bind('click', function() {
 			var t = $(this).parents('.about-i').find('.tab');
@@ -94,4 +172,12 @@
 		}, 500);
 		event.preventDefault();
 	});
+});
+$(window).resize(function() {
+	if ( $('.menu-l').length > 0 ) {
+		navFix();
+	}
+	if ( $('.filter-r').length > 0 ) {
+		filterFix();
+	}
 });
