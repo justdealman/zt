@@ -78,14 +78,14 @@ $(document).ready(function() {
 		filterFix();
 	}
 	if ( $('.about-i').length > 0 ) {
-		$('.about-i .nav li a').bind('click', function() {
+		$('.about-i .nav li a').bind('click', function(event) {
 			var t = $(this).parents('.about-i').find('.tab');
 			t.fadeOut(200);
 			t.filter('[data-tab="'+$(this).attr('href')+'"]').stop().delay(250).fadeIn(200);
 			$(this).parent().addClass('active').siblings().removeClass();
 			event.preventDefault();
 		}).filter(':first').click();
-		$('.about-i .tab .navigator li a').bind('click', function() {
+		$('.about-i .tab .navigator li a').bind('click', function(event) {
 			var t = $(this).parents('.tab').find('.range');
 			t.fadeOut(200);
 			t.filter('[data-range="'+$(this).attr('href')+'"]').stop().delay(250).fadeIn(200);
