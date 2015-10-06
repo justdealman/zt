@@ -1100,3 +1100,160 @@
 .gotop:hover {
 	background-color:#000000;
 }
+
+.timeline {
+	margin:-6px 0 30px;
+	border:4px solid rgba(0,0,0,0.1);
+	-webkit-border-radius:12px;
+	-moz-border-radius:12px;
+	border-radius:12px;
+}
+.timeline > div {
+	background:#ffffff;
+	padding:20px 0 27px;
+	-webkit-border-radius:12px;
+	-moz-border-radius:12px;
+	border-radius:12px;
+}
+.timeline .section {
+	display:none;
+	margin:0 109px;
+}
+.timeline .section h5 {
+	font-size:24px;
+	line-height:26px;
+	font-family:'Calibri', sans-serif;
+	padding:0;
+	margin:24px 0 14px;
+}
+.timeline .section :first-child {
+	margin-top:0;
+}
+.timeline .section p {
+	font-size:18px;
+	line-height:20px;
+	font-family:'Calibri', sans-serif;
+	margin:0 0 10px;
+}
+.imageflow {
+	overflow:hidden;
+	position:relative; 
+	text-align:left;
+	visibility:hidden;
+	width:100%;
+	margin:0 0 -61px;
+}
+.imageflow img {
+	border:none;
+	position:absolute;
+	top:0;
+	visibility:hidden;
+	-ms-interpolation-mode:bicubic;
+}
+.imageflow p {
+	margin:0 auto;
+	text-align:center;
+}
+.imageflow .loading {
+	border:1px solid white;
+	height:15px;
+	left:50%;
+	margin-left:-106px;
+	padding:5px;
+	position:relative;
+	visibility:visible;
+	width:200px;
+}
+.imageflow .loading_bar {
+	background:#fff;
+	height:15px;
+	visibility:visible;
+	width:1%;
+}
+.imageflow .navigation {
+	position:relative;
+	z-index:10000;
+	height:110px !important;
+	margin:76px 0 0;
+}
+.imageflow .caption {
+	display:none;
+	font-weight:bold;
+	position:relative; 
+	text-align:center;
+	z-index:10001;
+}
+.imageflow .scrollbar {
+	border-bottom:2px dotted #696969;
+	position:relative; 
+	visibility:hidden;
+	z-index:10002;
+	height:1px;
+	margin-left:111px !important;
+}
+.imageflow .slider {
+	height:24px;
+	font-size:24px;
+	line-height:24px;
+	font-weight:bold;
+	font-family:'PT Serif';
+	padding:4px 13px 5px;
+	margin:-53px 0 0;
+	position:absolute;
+	color:#ffffff;
+	z-index:10003;
+	background:#a7216b;
+}
+.imageflow .slider:after {
+	content:'';
+	position:absolute;
+	left:50%;
+	bottom:-9px;
+	margin-left:-7px;
+	border-left:7px solid transparent;
+	border-right:7px solid transparent;
+	border-top:9px solid #a7216b;
+}
+.imageflow .images {
+	overflow:hidden;
+	white-space:nowrap;
+}
+.imageflow .button {
+	position:relative;
+	height:19px;
+	width:19px;
+	cursor:pointer;
+}
+.imageflow .previous {
+	float:left;
+	margin:-15px 0 0 -88px;
+	background:url('../img/timeline_arrows.png') no-repeat left top;
+}
+.imageflow .previous:hover {
+	background-position:0 -19px;
+}
+.imageflow .next {
+	float:right;	
+	margin:-15px -88px 0 0;
+	background:url('../img/timeline_arrows.png') no-repeat -19px top;
+}
+.imageflow .next:hover {
+	background-position:-19px -19px;
+}
+.imageflow .navigation p {
+	position:absolute;
+	top:-17px;
+	width:69px;
+	color:#000000;
+	font-size:24px;
+	line-height:24px;
+	font-family:'PT Serif', serif;
+	text-align:center;
+	margin:0;
+}
+.imageflow .navigation .start {
+	left:42px;
+}
+.imageflow .navigation .end {
+	right:42px;
+}
